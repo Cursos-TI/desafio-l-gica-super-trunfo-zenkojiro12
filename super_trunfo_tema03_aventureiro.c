@@ -47,7 +47,7 @@ printf("\nCódigo da carta (ex - A01A):\n");
 printf("Digite o código da primeira carta:\n");
     scanf("%4s", carta1);
         getchar();
-printf("Digite o código da segunda carta:\n"); // Corrigido "DIgite"
+printf("Digite o código da segunda carta:\n"); 
     scanf("%4s", carta2);
         getchar();
 
@@ -55,7 +55,7 @@ printf("\nPopulação\n");
 printf("Digite o número de habitantes da primeira cidade (população):\n");
     scanf("%ld", &populacao1);
         getchar();
-printf("Digite o número de habitantes da segunda cidade:\n"); // Corrigido "núnero"
+printf("Digite o número de habitantes da segunda cidade:\n"); 
     scanf("%ld", &populacao2);
         getchar();
 
@@ -86,8 +86,8 @@ printf("Digite a quantidade de pontos turísticos da segunda cidade:\n");
     // Cálculos
     densidadep1 = (area1 != 0) ? (float)populacao1 / area1 : 0;
     densidadep2 = (area2 != 0) ? (float)populacao2 / area2 : 0;
-    percapito1 = (populacao1 != 0) ? (float)pib1 / populacao1 : 0; // Corrigido pib1
-    percapito2 = (populacao2 != 0) ? (float)pib2 / populacao2 : 0; // Corrigido pib2
+    percapito1 = (populacao1 != 0) ? (float)pib1 / populacao1 : 0; 
+    percapito2 = (populacao2 != 0) ? (float)pib2 / populacao2 : 0; 
     /* ? = operador ternário (nível avançado)
     Condição: area1 != 0 (verifica se area1 não é zero para evitar divisão por zero).
     Se verdadeira: densidadep1 recebe (float)populacao1 / area1 (calcula a densidade populacional).
