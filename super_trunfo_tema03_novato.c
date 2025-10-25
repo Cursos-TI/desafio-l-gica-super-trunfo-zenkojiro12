@@ -1,30 +1,30 @@
 #include <stdio.h>
 int main() {
-    // estado, código da carta, nome da cidade, população, área, PIB e número de pontos turísticos.
-    // troqui o nome do estado pelo o nome do país
-    /*
-    Obs - Fiz algumas mudanças em relação ao projeto pedido, que não comprometem o que foi solicitado, apenas para torná-lo mais interativo e bem estruturado.
-    */
-    char pais1[20], pais2[20];
-    char cidade1[20], cidade2[20];
-    char carta1[5], carta2[5];
-    long int populacao1, populacao2;
-    long int area1, area2;
-    long int pib1, pib2;
-    int pontost1, pontost2;
-    float densidadep1,densidadep2;
-    float percapito1,percapito2;
-    int placar1 = 0, placar2 = 0;
+// estado, código da carta, nome da cidade, população, área, PIB e número de pontos turísticos.
+// troqui o nome do estado pelo o nome do país
+/*
+Obs - Fiz algumas mudanças em relação ao projeto pedido, que não comprometem o que foi solicitado, apenas para torná-lo mais interativo e bem estruturado.
+*/
+char pais1[20], pais2[20];
+char cidade1[20], cidade2[20];
+char carta1[5], carta2[5];
+long int populacao1, populacao2;
+long int area1, area2;
+long int pib1, pib2;
+int pontost1, pontost2;
+float densidadep1,densidadep2;
+float percapito1,percapito2;
+int placar1 = 0, placar2 = 0;
 
-    printf("------------------------------------------------------------\n");
-    printf("  Desafio Super Trunfo - Países - Comparação das Cartas\n");
-    printf("------------------------------------------------------------\n");
+        printf("------------------------------------------------------------\n");
+        printf("  Desafio Super Trunfo - Países - Comparação das Cartas\n");
+        printf("------------------------------------------------------------\n");
 
-    printf("\n                     Nível Novato\n");
+        printf("\n                     Nível Novato\n");
 
-    printf("\n----------------------------------------\n");
-    printf("           Entrada de dados\n");
-    printf("------------------------------------------\n");
+        printf("\n----------------------------------------\n");
+        printf("           Entrada de dados\n");
+        printf("------------------------------------------\n");
 
     printf("\nPaís\n");
 
@@ -48,7 +48,7 @@ printf("Digite o nome da segunda cidade:\n");
 printf("Digite o código da primeira carta:\n");
     scanf("%4s",carta1);
         getchar();
-printf("DIgite o código da segunda carta:\n");
+printf("Digite o código da segunda carta:\n");
     scanf("%4s",carta2);
 
     printf("\nPopulação\n");
@@ -86,14 +86,31 @@ printf("Digite a quantidade de pontos turísticos da segunda cidade:\n");
     scanf("%d",&pontost2);
 
 //cálcalos - fiz uma mudança aqui :)
-densidadep1 = (area1 != 0) ? (float)populacao1 / area1 : 0;
-densidadep2 = (area2 != 0) ? (float)populacao2 / area2 : 0;
-percapito1 = (populacao1 != 0) ? (float)pib1 / populacao1 : 0; // Corrigido pib1
-percapito2 = (populacao2 != 0) ? (float)pib2 / populacao2 : 0; // Corrigido pib2
+if (area1 != 0) {
+densidadep1 = (float)populacao1 / area1;
+} else {
+densidadep1 = 0;
+}
+if (area2 != 0) {
+densidadep2 = (float)populacao2 / area2;
+} else {
+densidadep2 = 0;
+}
 
-    printf("\n---------------------------------\n");
-    printf("        Saída de dados\n ");
-    printf("-----------------------------------\n");
+if (populacao1 != 0) {
+percapito1 = (float) pib1 / populacao1;
+} else {
+percapito1 = 0;
+}
+if (populacao2 != 0) {
+percapito2 = (float) pib2 / populacao2;
+} else {
+percapito2 = 0;
+}
+
+        printf("\n---------------------------------\n");
+        printf("        Saída de dados\n ");
+        printf("-----------------------------------\n");
 
 printf("\nDADOS DA PRIMEIRA CARTA:\n");
 
@@ -119,10 +136,10 @@ printf("Pontos Turísticos: %d\n",pontost2);
 printf("Densidade populacional: %.2f\n",densidadep2);
 printf("PIB per capita: R$ %.2f\n",percapito2);
 
-    printf("\n---------------------------------\n");
-    printf("       Comparando as cartas\n ");
-    printf("-----------------------------------\n");
-    
+        printf("\n---------------------------------\n");
+        printf("       Comparando as cartas\n ");
+        printf("-----------------------------------\n");
+
 printf("Número de habitantes:\n");
 
 if(populacao1 > populacao2) {
@@ -196,13 +213,13 @@ if (percapito1 > percapito2) {
     printf("Empate!\n");
 }
 
-    printf("\n---------------------------------\n");
-    printf("           Placar final\n ");
-    printf("-----------------------------------\n");
+        printf("\n---------------------------------\n");
+        printf("           Placar final\n ");
+        printf("-----------------------------------\n");
 
-    printf(" Carta 1: %d Vitória(s)\n", placar1);
-    printf("Carta 2: %d Vitória(s)\n",placar2);
-    
+printf(" Carta 1: %d Vitória(s)\n", placar1);
+printf("Carta 2: %d Vitória(s)\n",placar2);
+
 if (placar1 > placar2) {
     printf("Carta 1 Venceu!\n");
 } else if (placar1 < placar2) {
