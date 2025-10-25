@@ -85,32 +85,11 @@ printf("Digite a quantidade de pontos turísticos da primeira cidade:\n");
 printf("Digite a quantidade de pontos turísticos da segunda cidade:\n");
     scanf("%d",&pontost2);
 
-//cálcalos
-if (area1 != 0) {
-    densidadep1 = (float)populacao1 / area1;
-}
-    else {
-    densidadep1 = 0;
-}
-if (area2 != 0) {
-    densidadep2 = (float)populacao2 / area2;
-} 
-    else {
-    densidadep2 = 0;
-    }
-
-if (populacao1 != 0) {
-    percapito1 = (float) pib1 / populacao1;
-}
-else {
-    percapito1 = 0;
-}
-if (populacao2 != 0) {
-    percapito2 = (float) pib2 / populacao2;
-}
-else {
-    percapito2 = 0;
-}
+//cálcalos - fiz uma mudança aqui :)
+densidadep1 = (area1 != 0) ? (float)populacao1 / area1 : 0;
+densidadep2 = (area2 != 0) ? (float)populacao2 / area2 : 0;
+percapito1 = (populacao1 != 0) ? (float)pib1 / populacao1 : 0; // Corrigido pib1
+percapito2 = (populacao2 != 0) ? (float)pib2 / populacao2 : 0; // Corrigido pib2
 
     printf("\n---------------------------------\n");
     printf("        Saída de dados\n ");
@@ -149,8 +128,7 @@ printf("Número de habitantes:\n");
 if(populacao1 > populacao2) {
     printf("Carta 1 Venceu!\n");
     placar1++;
-}
-else if (populacao1 < populacao2) {
+} else if (populacao1 < populacao2) {
     printf("Carta 2 venceu!\n");
     placar2++;
 }
@@ -163,12 +141,10 @@ else {
 if(area1 > area2) {
     printf("Carta 1 venceu!\n");
     placar1++;
-}
-else if (area1 < area2) {
+} else if (area1 < area2) {
     printf ("Carta 2 venceu!\n");
     placar2++;
-}
-else {
+} else {
     printf("Empate!\n");
 }
 
@@ -177,12 +153,10 @@ else {
 if (pib1 > pib2) {
     printf("Carta 1 venceu!\n");
     placar1++;
-}
-else if (pib1 < pib2) {
+} else if (pib1 < pib2) {
     printf("Carta 2 venceu!\n");
     placar2++;
-}
-else { 
+} else { 
     printf("Empate!\n");
 }
 
@@ -191,12 +165,10 @@ else {
 if (pontost1 > pontost2) { 
     printf("Carta 1 venceu!\n");
     placar1++;
-}
-else if (pontost1 < pontost2) {
+} else if (pontost1 < pontost2) {
     printf("Carta 2 venceu!\n");
     placar2++;
-}
-else {
+} else {
     printf("Empate!\n");
 }
 
@@ -205,12 +177,10 @@ else {
 if (densidadep1 < densidadep2) { 
     printf("Carta 1 venceu!\n");
     placar1++;
-}
-else if (densidadep1 > densidadep2) {
+} else if (densidadep1 > densidadep2) {
     printf("Carta 2 venceu!\n");
     placar2++;
-}
-else {
+} else {
     printf("Empate!\n");
 }
 
@@ -219,12 +189,10 @@ else {
 if (percapito1 > percapito2) {
     printf("Carta 1 venceu!\n");
     placar1++; // contador
-}
-else if (percapito1 < percapito2) {
+} else if (percapito1 < percapito2) {
     printf("Carta 2 venceu!\n");
     placar2++;
-}
-else {
+} else {
     printf("Empate!\n");
 }
 
@@ -237,11 +205,9 @@ else {
     
 if (placar1 > placar2) {
     printf("Carta 1 Venceu!\n");
-}
-else if (placar1 < placar2) {
+} else if (placar1 < placar2) {
     printf("Carta 2 venceu!\n");
-}
-else {
+} else {
     printf("Empate!\n");
 }
 
