@@ -29,59 +29,59 @@ int choises;
 
 printf("\nPaís\n");
 printf("Digite o nome do primeiro país:\n");
-scanf("%19[^\n]", pais1);
-getchar();
+    scanf("%19[^\n]", pais1);
+        getchar();
 printf("Digite o nome do segundo país:\n");
-scanf("%19[^\n]", pais2);
-getchar();
+    scanf("%19[^\n]", pais2);
+        getchar();
 
 printf("\nCidade\n");
 printf("Digite o nome da primeira cidade:\n");
-scanf("%19[^\n]", cidade1);
-getchar();
+    scanf("%19[^\n]", cidade1);
+        getchar();
 printf("Digite o nome da segunda cidade:\n");
-scanf("%19[^\n]", cidade2);
-getchar();
+    scanf("%19[^\n]", cidade2);
+        getchar();
 
 printf("\nCódigo da carta (ex - A01A):\n");
 printf("Digite o código da primeira carta:\n");
-scanf("%4s", carta1);
-getchar();
+    scanf("%4s", carta1);
+        getchar();
 printf("Digite o código da segunda carta:\n");
-scanf("%4s", carta2);
-getchar();
+    scanf("%4s", carta2);
+        getchar();
 
 printf("\nPopulação\n");
 printf("Digite o número de habitantes da primeira cidade (população):\n");
-scanf("%ld", &populacao1);
-getchar();
+    scanf("%ld", &populacao1);
+        getchar();
 printf("Digite o número de habitantes da segunda cidade:\n");
-scanf("%ld", &populacao2);
-getchar();
+    scanf("%ld", &populacao2);
+        getchar();
 
 printf("\nÁrea\n");
 printf("Digite a área da primeira cidade:\n");
-scanf("%ld", &area1);
-getchar();
+    scanf("%ld", &area1);
+        getchar();
 printf("Digite a área da segunda cidade:\n");
-scanf("%ld", &area2);
-getchar();
+    scanf("%ld", &area2);
+        getchar();
 
 printf("\nPIB\n");
 printf("Digite o PIB da primeira cidade:\n");
-scanf("%ld", &pib1);
-getchar();
+    scanf("%ld", &pib1);
+        getchar();
 printf("Digite o PIB da segunda cidade:\n");
-scanf("%ld", &pib2);
-getchar();
+    scanf("%ld", &pib2);
+        getchar();
 
 printf("\nPontos Turísticos\n");
 printf("Digite a quantidade de pontos turísticos da primeira cidade:\n");
-scanf("%d", &pontost1);
-getchar();
+    scanf("%d", &pontost1);
+        getchar();
 printf("Digite a quantidade de pontos turísticos da segunda cidade:\n");
-scanf("%d", &pontost2);
-getchar();
+    scanf("%d", &pontost2);
+        getchar();
 
 // Cálculos
 densidadep1 = (area1 != 0) ? (float)populacao1 / area1 : 0;
