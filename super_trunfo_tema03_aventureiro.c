@@ -88,8 +88,11 @@ printf("Digite a quantidade de pontos turísticos da segunda cidade:\n");
     densidadep2 = (area2 != 0) ? (float)populacao2 / area2 : 0;
     percapito1 = (populacao1 != 0) ? (float)pib1 / populacao1 : 0; // Corrigido pib1
     percapito2 = (populacao2 != 0) ? (float)pib2 / populacao2 : 0; // Corrigido pib2
-
-    // Saída de dados
+    /* ? = operador ternário (nível avançado)
+    Condição: area1 != 0 (verifica se area1 não é zero para evitar divisão por zero).
+    Se verdadeira: densidadep1 recebe (float)populacao1 / area1 (calcula a densidade populacional).
+    Se falsa: densidadep1 recebe 0 (evita erro se area1 for zero).
+    */
         printf("\n---------------------------------\n");
         printf("        Saída de dados\n");
         printf("-----------------------------------\n");
